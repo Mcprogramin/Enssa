@@ -73,3 +73,6 @@ export type Button = {
   label: string;
   link: string;
 };
+export type Carousel = {
+  avatar: string;
+};

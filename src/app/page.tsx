@@ -3,15 +3,18 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
-import Testimonials from "@/partials/Testimonials";
+import News from "@/partials/News";
 import { Button, Feature } from "@/types";
 import { FaCheck } from "react-icons/fa/index.js";
+import Carousel from "@/partials/Carousel";
+import Alert from "@/components/Alert";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
   const testimonial = getListPage("sections/testimonial.md");
   const callToAction = getListPage("sections/call-to-action.md");
   const { frontmatter } = homepage;
+  const carousel = getListPage("sections/carousel.md")
   const {
     banner,
     features,
@@ -22,6 +25,7 @@ const Home = () => {
 
   return (
     <>
+      <Alert/>
       <SeoMeta />
       <section className="section pt-14">
         <div className="container">
@@ -42,7 +46,7 @@ const Home = () => {
               )}
             </div>
             {banner.image && (
-              <div className="col-12">
+              <div className="col-12  ">
                 <ImageFallback
                   src={banner.image}
                   className="mx-auto"
@@ -63,17 +67,20 @@ const Home = () => {
           className={`section-sm ${index % 2 === 0 && "bg-gradient"}`}
         >
           <div className="container">
-            <div className="row items-center justify-between">
+            <div className="row items-center justify-between ">
               <div
-                className={`mb:md-0 mb-6 md:col-5 ${
-                  index % 2 !== 0 && "md:order-2"
+                className={`mb:md-0 mb-6 md:col-5   ${
+                  index % 2 !== 0 && "md:order-2 "
                 }`}
+                
               >
                 <ImageFallback
                   src={feature.image}
-                  height={480}
-                  width={520}
-                  alt={feature.title}
+                  className="mx-auto"
+                  width="800"
+                  height="420"
+                  alt="banner image"
+                  priority
                 />
               </div>
               <div
@@ -88,7 +95,9 @@ const Home = () => {
                 <p
                   className="mb-8 text-lg"
                   dangerouslySetInnerHTML={markdownify(feature.content)}
+                  
                 />
+                
                 <ul>
                   {feature.bulletpoints.map((bullet: string) => (
                     <li className="relative mb-4 pl-6" key={bullet}>
@@ -97,6 +106,7 @@ const Home = () => {
                     </li>
                   ))}
                 </ul>
+                
                 {feature.button.enable && (
                   <a
                     className="btn btn-primary mt-5"
@@ -110,8 +120,9 @@ const Home = () => {
           </div>
         </section>
       ))}
-
-      <Testimonials data={testimonial} />
+      <Carousel data={carousel}/>
+      <News data={testimonial} />
+      
       <CallToAction data={callToAction} />
     </>
   );

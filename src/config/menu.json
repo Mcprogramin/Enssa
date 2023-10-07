@@ -5,53 +5,42 @@
       "url": "/"
     },
     {
-      "name": "About",
-      "url": "/about"
-    },
-    {
-      "name": "Elements",
-      "url": "/elements"
-    },
-    {
-      "name": "Pages",
-      "url": "",
+      "name": "The School",
+      "url": "/about",
       "hasChildren": true,
-      "children": [
+      "children":[
         {
-          "name": "Contact",
-          "url": "/contact"
+          "name":"Careers",
+          "url": "/"
         },
         {
-          "name": "Blog",
-          "url": "/blog"
-        },
-        {
-          "name": "Authors",
-          "url": "/authors"
-        },
-        {
-          "name": "Categories",
-          "url": "/categories"
-        },
-        {
-          "name": "Search",
-          "url": "/search"
-        },
-        {
-          "name": "404 Page",
-          "url": "/404"
+          "name": "FAQ",
+          "url": "/"
         }
       ]
-    }
+
+    },
+    {
+      "name": "Student Life",
+      "url": "/"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact"
+    },
+    {
+          "name": "Search",
+          "url": "/search"
+        }
   ],
   "footer": [
     {
-      "name": "Elements",
-      "url": "/elements"
+      "name": "MESRS Platforms",
+      "url": "http://www.mesrs.dz/index.php/fr/plateformes-mesrs/"
     },
     {
-      "name": "Privacy Policy",
-      "url": "/privacy-policy"
+      "name": "contact@nhsas.edu.dz",
+      "url": "mailto:contact@nhsas.edu.dz"
     }
   ]
 }
