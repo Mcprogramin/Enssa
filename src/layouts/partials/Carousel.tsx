@@ -22,7 +22,7 @@ const Carousel = ({ data }: { data: PageData }) => {
         <section className="section">
           <div className="container">
             <div className="row">
-              <div className="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
+              <div className="mx-auto text-center md:col-10 lg:col-8 xl:col-6">
               </div>
               <div className="col-12">
                 <Swiper
@@ -49,7 +49,7 @@ const Carousel = ({ data }: { data: PageData }) => {
                   {data.frontmatter.Carousels.map(
                     (item: Carousel, index: number) => (
                       <SwiperSlide key={index}>
-                        <div className="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
+                        <div className="rounded-lg bg-theme-light px-7 pt-12 dark:bg-darkmode-theme-light">
                           <div className="text-dark dark:text-white">
                             
                           </div><ImageFallback
