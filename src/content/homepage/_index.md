@@ -3,7 +3,7 @@
 banner:
   title: "Welcome to National Higher School of Autonomous Systems"
   content: "National Higher School of Autonomous Systems"
-  image: "/images/robot arm-amico.png"
+  image: "/images/robot-arm.png"
   button:
     enable: true
     label: "More Informations"
