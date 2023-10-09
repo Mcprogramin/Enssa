@@ -53,10 +53,10 @@ export type Feature = {
   title: string;
 };
 
-export type Testimonial = {
+export type News = {
   name: string;
   designation: string;
-  avatar: string;
+  image: string;
   content: string;
 };
 

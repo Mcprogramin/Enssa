@@ -2,7 +2,7 @@
 
 import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
-import { Testimonial } from "@/types";
+import { News } from "@/types";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ interface PageData {
     enable?: boolean;
     title: string;
     description?: string;
-    testimonials: Array<Testimonial>;
+    news: Array<News>;
   };
 }
 
@@ -26,9 +26,9 @@ const Testimonials = ({ data }: { data: PageData }) => {
           <div className="container">
             <div className="row">
               <div className="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
-                <h2
+                <a
                   dangerouslySetInnerHTML={markdownify(data.frontmatter.title)}
-                  className="mb-4"
+                  className="mb-4 text-h2" href="/news"
                 />
                 <p
                   dangerouslySetInnerHTML={markdownify(
@@ -57,8 +57,8 @@ const Testimonials = ({ data }: { data: PageData }) => {
                     },
                   }}
                 >
-                  {data.frontmatter.testimonials.map(
-                    (item: Testimonial, index: number) => (
+                  {data.frontmatter.news.map(
+                    (item: News, index: number) => (
                       <SwiperSlide key={index}>
                         <div className="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
                           <div className="text-dark dark:text-white">
@@ -67,7 +67,7 @@ const Testimonials = ({ data }: { data: PageData }) => {
                                 height={700}
                                 width={500}
                                 className="rounded-full"
-                                src={item.avatar}
+                                src={item.image}
                                 alt={item.name}
                               />
                           
