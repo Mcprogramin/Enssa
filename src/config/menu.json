@@ -22,11 +22,15 @@
     },
     {
       "name": "Student Life",
-      "url": "/"
+      "url": "/student_life"
     },
     {
       "name": "Contact",
       "url": "/contact"
+    },
+    {
+      "name": "News",
+      "url": "/news"
     },
     {
           "name": "Search",
