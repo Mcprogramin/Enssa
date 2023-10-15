@@ -3,7 +3,7 @@ enable: true
 title: "News"
 description: "_____________"
 
-# Testimonials
+
 Carousels:
   - avatar: "/images/pic-1.jpg"
   - avatar: "/images/pic-2.jpg"

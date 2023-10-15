@@ -2,7 +2,7 @@
 
 import ImageFallback from "@/helpers/ImageFallback";
 import { markdownify } from "@/lib/utils/textConverter";
-import { News } from "@/types";
+import { news } from "@/types";
 import "swiper/css";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,7 +14,7 @@ interface PageData {
     enable?: boolean;
     title: string;
     description?: string;
-    news: Array<News>;
+    news: Array<news>;
   };
 }
 
@@ -58,7 +58,7 @@ const Testimonials = ({ data }: { data: PageData }) => {
                   }}
                 >
                   {data.frontmatter.news.map(
-                    (item: News, index: number) => (
+                    (item: news, index: number) => (
                       <SwiperSlide key={index}>
                         <div className="rounded-lg bg-theme-light px-7 py-10 dark:bg-darkmode-theme-light">
                           <div className="text-dark dark:text-white">

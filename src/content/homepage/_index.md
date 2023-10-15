@@ -12,7 +12,7 @@ banner:
 # Features
 features:
   - title: "The School"
-    image: "/images/icons8-bmo.svg"
+    image: "/images/robot.svg"
     content: The National Higher School of Autonomous Systems (NHSAS) is a prestigious institution focused on education and research in autonomous systems:"
     bulletpoints:
       - "It offers comprehensive and attractive courses designed to train high-level engineers in the field;"

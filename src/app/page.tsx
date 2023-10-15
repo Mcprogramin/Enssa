@@ -3,7 +3,6 @@ import { getListPage } from "@/lib/contentParser";
 import { markdownify } from "@/lib/utils/textConverter";
 import CallToAction from "@/partials/CallToAction";
 import SeoMeta from "@/partials/SeoMeta";
-import News from "@/partials/News";
 import { Button, Feature } from "@/types";
 import { FaCheck } from "react-icons/fa/index.js";
 import Carousel from "@/partials/Carousel";
@@ -11,7 +10,6 @@ import Alert from "@/components/Alert";
 
 const Home = () => {
   const homepage = getListPage("homepage/_index.md");
-  const testimonial = getListPage("sections/testimonial.md");
   const callToAction = getListPage("sections/call-to-action.md");
   const { frontmatter } = homepage;
   const carousel = getListPage("sections/carousel.md")
@@ -27,6 +25,7 @@ const Home = () => {
     <>
       <Alert/>
       <SeoMeta />
+      
       <section className="section pt-14">
         <div className="container">
           <div className="row justify-center">
@@ -121,7 +120,6 @@ const Home = () => {
         </section>
       ))}
       <Carousel data={carousel}/>
-      <News data={testimonial} />
       
       <CallToAction data={callToAction} />
     </>
